@@ -13,7 +13,7 @@
 			],
 			"platform": "linux",
 			"repository": {
-				"url": "https://github.com/TemplesOfSyrinx/portainer-syno-templates",
+				"url": "https://github.com/TemplesOfSyrinx/portainer-media-templates",
 				"stackfile": "v2.0/stacks/linuxserver_jellyfin/docker-compose.yml"
 			},
 			"env": [
