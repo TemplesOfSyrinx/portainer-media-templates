@@ -21,19 +21,19 @@
 					"name": "JELLYFIN_PUBLISHED_PORT",
 					"label": "Published Port",
 					"description": "Port Agent will be accessible on. (Defaults to 8096)",
-					"set": "8096"
+					"set": 8096
 				},
 				{
 					"name": "PUID",
 					"label": "User ID",
 					"description": "for UserID",
-					"set": "0"
+					"set": 0
 				},
 				{
 					"name": "PGID",
 					"label": "Group ID",
 					"description": "for GroupID",
-					"set": "65536"
+					"set": 65536
 				},
 				{
 					"name": "TZ",
