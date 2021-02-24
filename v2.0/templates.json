@@ -21,19 +21,60 @@
 					"name": "JELLYFIN_PUBLISHED_PORT",
 					"label": "Published Port",
 					"description": "Port Agent will be accessible on. (Defaults to 8096)",
-					"set": "8096"
+					"set": 8096
 				},
 				{
 					"name": "PUID",
 					"label": "User ID",
 					"description": "for UserID",
-					"set": "0"
+					"set": 0
 				},
 				{
 					"name": "PGID",
 					"label": "Group ID",
 					"description": "for GroupID",
-					"set": "65536"
+					"set": 65536
+				},
+				{
+					"name": "TZ",
+					"label": "Timezone",
+					"description": "Timezone Portainer will run in."
+				}
+			]
+		},
+		{
+			"type": 3,
+			"title": "Linuxserver Jellyfin - Synology",
+			"description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
+			"note": "Here is an opinionated example to help you get started creating a container.",
+			"administrator_only": true,
+			"categories": [
+				"media",
+				"streaming"
+			],
+			"platform": "linux",
+			"repository": {
+				"url": "https://github.com/TemplesOfSyrinx/portainer-media-templates",
+				"stackfile": "v2.0/stacks/linuxserver_jellyfin/docker-compose-syno.yml"
+			},
+			"env": [
+				{
+					"name": "JELLYFIN_PUBLISHED_PORT",
+					"label": "Published Port",
+					"description": "Port Agent will be accessible on. (Defaults to 8096)",
+					"set": 8096
+				},
+				{
+					"name": "PUID",
+					"label": "User ID",
+					"description": "for UserID",
+					"set": 0
+				},
+				{
+					"name": "PGID",
+					"label": "Group ID",
+					"description": "for GroupID",
+					"set": 65536
 				},
 				{
 					"name": "TZ",

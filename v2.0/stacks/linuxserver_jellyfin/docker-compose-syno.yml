@@ -9,16 +9,12 @@ services:
       #- TZ=America/Chicago
       #- JELLYFIN_PublishedServerUrl=<IP> #optional
     volumes:
-      - config:/config
-      - video:/data/video
-      - music:/data/music
+      - /volume1/docker/jellyfin:/config
+      - /volume1/video:/data/video
+      - /volume1/music:/data/music
     devices:
       - /dev/dri:/dev/dri
     ports:
       - ${JELLYFIN_PUBLISHED_PORT}:8096
     restart: unless-stopped
     network_mode: "host"
-volumes:
-  config:
-  video:
-  music:
