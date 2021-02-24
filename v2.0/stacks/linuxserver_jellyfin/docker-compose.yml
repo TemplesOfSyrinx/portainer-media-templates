@@ -12,8 +12,6 @@ services:
       - config:/config
       - video:/data/video
       - music:/data/music
-    devices:
-      - /dev/dri:/dev/dri
     ports:
       - ${JELLYFIN_PUBLISHED_PORT}:8096
     restart: unless-stopped
