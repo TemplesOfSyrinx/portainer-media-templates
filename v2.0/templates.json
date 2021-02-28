@@ -103,7 +103,7 @@
 			"title": "Linuxserver Jellyfin",
 			"description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
 			"note": "Here is an opinionated example to help you get started creating a container.",
-			"name": "linuxserver_jellyfin",
+			"name": "linuxserver-jellyfin",
 			"administrator_only": true,
 			"categories": [
 				"media",
@@ -145,7 +145,7 @@
 			"title": "Linuxserver Jellyfin - Synology",
 			"description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
 			"note": "Here is an opinionated example to help you get started creating a container.",
-			"name": "linuxserver_jellyfin",
+			"name": "linuxserver-jellyfin",
 			"administrator_only": true,
 			"categories": [
 				"media",
