@@ -4,12 +4,12 @@ services:
     image: ghcr.io/linuxserver/jellyfin
     container_name: linuxserver_jellyfin
     # environment:
-      #- PUID=0
+      #- PUID=1024
       #- PGID=65536
       #- TZ=America/Chicago
       #- JELLYFIN_PublishedServerUrl=<IP> #optional
     volumes:
-      - /volume1/docker/jellyfin:/config
+      - /volume1/docker/jellyfin/config:/config
       - /volume1/video:/data/video
       - /volume1/music:/data/music
     devices:
