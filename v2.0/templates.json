@@ -2,6 +2,103 @@
 	"version": "2",
 	"templates": [
 		{
+			"type": 1,
+			"title": "Linuxserver Jellyfin",
+			"description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
+			"note": "Here is an opinionated example to help you get started creating a container.",
+			"name": "linuxserver_jellyfin",
+			"administrator_only": true,
+			"categories": [
+				"media",
+				"streaming"
+			],
+			"platform": "linux",
+			"image": "ghcr.io/linuxserver/jellyfin",
+			"env": [
+				{
+					"name": "PUID",
+					"label": "User ID",
+					"description": "for UserID",
+					"default": "0"
+				},
+				{
+					"name": "PGID",
+					"label": "Group ID",
+					"description": "for GroupID",
+					"default": "65536"
+				},
+				{
+					"name": "TZ",
+					"label": "Timezone",
+					"description": "Timezone Portainer will run in."
+				}
+			],
+			"ports": [
+				"8096:8096/tcp"
+			],
+			"volumes": [
+				{
+					"container": "/config"
+				},
+				{
+					"container": "/data/video"
+				},
+				{
+					"container": "/data/music"
+				}
+			]
+		},
+		{
+			"type": 1,
+			"title": "Linuxserver Jellyfin - Synology",
+			"description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
+			"note": "Here is an opinionated example to help you get started creating a container.",
+			"name": "linuxserver_jellyfin",
+			"administrator_only": true,
+			"categories": [
+				"media",
+				"streaming"
+			],
+			"platform": "linux",
+			"image": "ghcr.io/linuxserver/jellyfin",
+			"env": [
+				{
+					"name": "PUID",
+					"label": "User ID",
+					"description": "for UserID (admin)",
+					"default": "1024"
+				},
+				{
+					"name": "PGID",
+					"label": "Group ID",
+					"description": "for GroupID (video)",
+					"default": "65536"
+				},
+				{
+					"name": "TZ",
+					"label": "Timezone",
+					"description": "Timezone Portainer will run in."
+				}
+			],
+			"ports": [
+				"8096:8096/tcp"
+			],
+			"volumes": [
+				{
+					"container": "/config",
+					"bind": "/volume1/docker/jellyfin/config"
+				},
+				{
+					"container": "/data/video",
+					"bind": "/volume1/video"
+				},
+				{
+					"container": "/data/music",
+					"bind": "/volume1/music"
+				}
+			]
+		},
+		{
 			"type": 3,
 			"title": "Linuxserver Jellyfin",
 			"description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
@@ -68,13 +165,13 @@
 				{
 					"name": "PUID",
 					"label": "User ID",
-					"description": "for UserID",
-					"default": "0"
+					"description": "for UserID (admin)",
+					"default": "1024"
 				},
 				{
 					"name": "PGID",
 					"label": "Group ID",
-					"description": "for GroupID",
+					"description": "for GroupID (video)",
 					"default": "65536"
 				},
 				{
