@@ -101,6 +101,99 @@
 			]
 		},
 		{
+			"type": 1,
+			"title": "MediaElch",
+			"description": "MediaElch is a MediaManager for Kodi. Information about Movies, TV Shows, Concerts and Music are stored as NFO files.",
+			"note": "Here is an opinionated example to help you get started creating a container.",
+			"name": "rveillerot_mediaelch",
+			"administrator_only": true,
+			"categories": [
+				"media"
+			],
+			"platform": "linux",
+			"image": "rveillerot/mediaelch",
+			"network": "bridge",
+			"env": [
+				{
+					"name": "PUID",
+					"label": "User ID",
+					"description": "for UserID",
+					"default": "0"
+				},
+				{
+					"name": "PGID",
+					"label": "Group ID",
+					"description": "for GroupID",
+					"default": "65536"
+				},
+				{
+					"name": "TZ",
+					"label": "Timezone",
+					"description": "Timezone Portainer will run in."
+				}
+			],
+			"ports": [
+				"5800:5800/tcp"
+			],
+			"volumes": [
+				{
+					"container": "/home/mediaelch/.config/kvibes"
+				},
+				{
+					"container": "/movies"
+				},
+				{
+					"container": "/tvshows"
+				}
+			]
+		},
+		{
+			"type": 1,
+			"title": "MediaElch - Synology",
+			"description": "MediaElch is a MediaManager for Kodi. Information about Movies, TV Shows, Concerts and Music are stored as NFO files.",
+			"note": "Here is an opinionated example to help you get started creating a container.",
+			"name": "rveillerot_mediaelch",
+			"administrator_only": true,
+			"categories": [
+				"media"
+			],
+			"platform": "linux",
+			"image": "rveillerot/mediaelch",
+			"network": "bridge",
+			"env": [
+				{
+					"name": "PUID",
+					"label": "User ID",
+					"description": "for UserID (admin)",
+					"default": "1024"
+				},
+				{
+					"name": "PGID",
+					"label": "Group ID",
+					"description": "for GroupID (video)",
+					"default": "65536"
+				},
+				{
+					"name": "TZ",
+					"label": "Timezone",
+					"description": "Timezone Portainer will run in."
+				}
+			],
+			"ports": [
+				"5800:5800/tcp"
+			],
+			"volumes": [
+				{
+					"container": "/home/mediaelch/.config/kvibes",
+					"bind": "/volume1/docker/mediaelch/config"
+				},
+				{
+					"container": "/video",
+					"bind": "/volume1/public/Media"
+				}
+			]
+		},
+		{
 			"type": 3,
 			"title": "Linuxserver Jellyfin",
 			"description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
