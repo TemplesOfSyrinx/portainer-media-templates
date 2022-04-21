@@ -156,7 +156,8 @@
 			"name": "rveillerot_mediaelch",
 			"administrator_only": true,
 			"categories": [
-				"media"
+				"media",
+				"synology"
 			],
 			"platform": "linux",
 			"image": "rveillerot/mediaelch",
