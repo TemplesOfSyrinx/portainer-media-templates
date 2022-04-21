@@ -58,7 +58,8 @@
 			"administrator_only": true,
 			"categories": [
 				"media",
-				"streaming"
+				"streaming",
+				"synology"
 			],
 			"platform": "linux",
 			"image": "ghcr.io/linuxserver/jellyfin",
